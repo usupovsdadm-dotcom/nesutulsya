@@ -269,7 +269,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 .zapis{position:relative;background:var(--lime);color:#0d0d0d;padding:clamp(90px,11vw,150px) clamp(16px,4vw,56px);overflow:hidden}
 .zapis__paint{position:absolute;inset:0;background:#0d0d0d;z-index:0;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transition:clip-path 1.2s cubic-bezier(.7,0,.2,1)}
 .zapis.in .zapis__paint{clip-path:polygon(0 0,100% 0,100% 0,0 0)}
-.zapis::before{content:"";position:absolute;inset:0;background:url(../assets/tex/concrete.webp) center/cover;mix-blend-mode:multiply;opacity:.12;pointer-events:none}
+.zapis::before{content:"";position:absolute;inset:0;background:url(../assets/tex/concrete.webp) center/cover;mix-blend-mode:multiply;opacity:0;pointer-events:none}
 .zapis__inner{position:relative;z-index:1;max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
 .zapis .spray-title{font-size:clamp(46px,6.4vw,96px);text-align:left}
 .pricetag{display:inline-block;margin:22px 0 18px;background:#0d0d0d;color:var(--lime);padding:10px 26px;transform:rotate(-3deg);box-shadow:8px 8px 0 var(--pink)}
