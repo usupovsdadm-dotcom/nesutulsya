@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>«НеСутулься» — реабилитация в Москве: боли в спине и шее, сутулость, после операций</title>
+<meta name="description" content="Реабилитационный центр «НеСутулься» Кирилла Тумарца в Москве. Ищем причину боли в спине, шее, сутулости и плоскостопия, реабилитация до и после операций и спортивная. Первичный приём — 5&nbsp;000&nbsp;₽.">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="canonical" href="https://usupovsdadm-dotcom.github.io/nesutulsya/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="НеСутулься">
+<meta property="og:title" content="«НеСутулься» — найдём причину боли и исправим">
+<meta property="og:description" content="Реабилитация в Москве: спина, шея, сутулость, плоскостопие, до/после операций, спорт. Первичный приём — 5&nbsp;000&nbsp;₽.">
+<meta property="og:url" content="https://usupovsdadm-dotcom.github.io/nesutulsya/">
+<meta property="og:image" content="https://usupovsdadm-dotcom.github.io/nesutulsya/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/spray.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"НеСутулься","description":"Реабилитационный центр","telephone":"+7 926 691-18-05","address":{"@type":"PostalAddress","streetAddress":"проспект Будённого, 30А","addressLocality":"Москва","addressCountry":"RU"},"sameAs":["https://vk.com/nesutulsyamsk","https://rutube.ru/channel/27963576/"]}</script>
+</head>
+<body class="is-loading">
+<a class="skip" href="#main">К содержимому</a>
+
+<!-- PRELOADER: логотип «рисуется баллончиком» -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <canvas class="preloader__fx" id="preFx"></canvas>
+  <svg class="preloader__logo" viewBox="0 0 900 197">
+    <defs>
+      <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="26"/></filter>
+      <mask id="sprayMask" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="197">
+        <path id="sprayPath" d="M-30 34 H930 V98 H-30 V164 H930" fill="none" stroke="#fff" stroke-width="78" stroke-linecap="round" pathLength="1" filter="url(#rough)"/>
+      </mask>
+    </defs>
+    <image href="assets/img/logo.webp" width="900" height="197" mask="url(#sprayMask)"/>
+  </svg>
+  <p class="preloader__hint">трясём баллончик…</p>
+</div>
+
+<canvas id="sprayCursor" class="spray-canvas" aria-hidden="true"></canvas>
+<div class="can-cursor" id="canCursor" aria-hidden="true"><svg viewBox="0 0 40 64"><rect x="9" y="16" width="22" height="44" rx="5" fill="#bdf06b" stroke="#0d0d0d" stroke-width="2"/><rect x="13" y="8" width="14" height="10" rx="2" fill="#f2f2ec" stroke="#0d0d0d" stroke-width="2"/><rect x="17" y="2" width="6" height="7" rx="1" fill="#ff2d8a" stroke="#0d0d0d" stroke-width="2"/><path d="M9 34h22" stroke="#0d0d0d" stroke-width="2"/><text x="20" y="50" font-size="9" text-anchor="middle" font-family="Unbounded,sans-serif" font-weight="800" fill="#0d0d0d">НС</text></svg></div>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<header class="hdr" id="hdr">
+  <a class="hdr__logo" href="#top" aria-label="НеСутулься — наверх"><img src="assets/img/logo.webp" alt="НеСутулься" width="900" height="197"></a>
+  <nav class="hdr__nav" aria-label="Разделы">
+    <a href="#problems">Что болит</a><a href="#approach">Подход</a><a href="#founder">Основатель</a><a href="#team">Команда</a><a href="#friends">Нам доверяют</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <div class="hdr__right">
+    <span class="status" data-status><i></i><span>10:00–21:00 МСК</span></span>
+    <a class="hdr__phone" href="tel:+79266911805">+7 926 691-18-05</a>
+    <a class="btn btn--sm btn--lime magnetic" href="#zapis">Записаться</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <nav aria-label="Меню">
+    <a href="#problems">Что болит</a><a href="#approach">Подход</a><a href="#zapis">Запись · 5&nbsp;000&nbsp;₽</a><a href="#founder">Основатель</a><a href="#team">Команда</a><a href="#friends">Нам доверяют</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <div class="mnav__foot"><a href="tel:+79266911805">+7 926 691-18-05</a><span data-status class="status"><i></i><span>10:00–21:00 МСК</span></span></div>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__wall" data-speed="0.25" aria-hidden="true"></div>
+  <div class="hero__tags" aria-hidden="true"><span data-speed="0.12">НС</span><span data-speed="-0.08">СПИНА ОК?</span><span data-speed="0.18">НЕ СУТУЛЬСЯ</span></div>
+  <div class="splat splat--1" data-speed="-0.15" aria-hidden="true"></div>
+  <div class="splat splat--2" data-speed="0.1" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="label-tape reveal">Реабилитационный центр · Москва</p>
+      <div class="mega glitch" data-text="НЕ СУТУЛЬСЯ" aria-hidden="true"><span class="mega__ne">НЕ</span><span class="mega__s">СУТУЛЬСЯ</span></div>
+      <h1 class="hero__h1 reveal">Реабилитолог в Москве. <em>Найдём причину</em> боли — и&nbsp;исправим.</h1>
+      <p class="typer reveal" aria-live="polite"><span class="typer__w" id="typer">Боли в спине?</span><span class="typer__c">|</span> <b>— решим!</b></p>
+      <div class="offer reveal">
+        <div class="offer__price"><small>первичный приём</small><strong>5&nbsp;000&nbsp;₽</strong></div>
+        <ul><li>осмотр всего опорно-двигательного аппарата</li><li>мышечное тестирование</li><li>детальный план реабилитации</li></ul>
+      </div>
+      <div class="hero__cta reveal">
+        <a class="btn btn--lime btn--xl magnetic" href="#zapis"><span>Записаться на приём</span></a>
+        <a class="btn btn--ghost btn--xl magnetic" href="tel:+79266911805"><span>Позвонить</span></a>
+      </div>
+    </div>
+    <div class="hero__art" data-sticker-zone>
+      <div class="hero__blob" aria-hidden="true"></div>
+      <figure class="hero__poster" data-speed="-0.06">
+        <img src="assets/img/founder.webp" alt="Кирилл Тумарец — основатель «НеСутулься», ведущий реабилитолог" width="805" height="1100" fetchpriority="high">
+        <figcaption><b>Кирилл Тумарец</b>основатель · ведущий реабилитолог</figcaption>
+      </figure>
+      <div class="tv" aria-hidden="true">
+        <video class="tv__v" muted loop playsinline preload="none" poster="assets/img/tape-poster.webp" data-src="assets/img/tape.mp4"></video>
+        <span class="tv__rec">● REC</span>
+      </div>
+      <button class="sticker sticker--price" data-drag type="button" aria-label="Стикер: первичный приём 5 000 рублей"><b>5&nbsp;000&nbsp;₽</b><small>первичный<br>приём</small></button>
+      <button class="sticker sticker--round" data-drag type="button" aria-label="Стикер: тело — одна система">ТЕЛО —<br>ОДНА<br>СИСТЕМА</button>
+      <button class="sticker sticker--note" data-drag type="button" aria-label="Стикер: потаскай меня">потаскай<br>меня ↗</button>
+    </div>
+  </div>
+  <div class="ctape ctape--y" aria-hidden="true"><div class="ctape__track"><span>ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ </span><span>ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ </span></div></div>
+  <div class="ctape ctape--g" aria-hidden="true"><div class="ctape__track"><span>ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ </span><span>ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ ДИАГНОСТИКА ✦ ИНДИВИДУАЛЬНЫЙ ПЛАН ✦ ПРОРАБОТКА ТЕЛА ✦ РЕАБИЛИТАЦИЯ ✦ МОСКВА, ПРОСПЕКТ БУДЁННОГО, 30А ✦ </span></div></div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="sec sec--concrete" id="problems">
+  <div class="sec-head "><h2 class="spray-title" data-text="ЧТО БОЛИТ?">ЧТО БОЛИТ?</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Тело — одна система. Работаем не с симптомом, а с первопричиной.</p></div>
+  <div class="pgrid"><article class="pcard tilt reveal" style="--r:2.4deg;--d:0ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">01</div>
+  <h3 class="pcard__t">До / после операции</h3>
+  <p class="pcard__lead">Реабилитация нужна и ДО, и ПОСЛЕ операции.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Грамотная реабилитация ускоряет заживление, возвращает функцию прооперированной зоне и тебя — к полноценной жизни. Это индивидуальный процесс: нужны твоё активное участие и выполнение рекомендаций специалистов.</p></details>
+</article><article class="pcard tilt reveal" style="--r:-2.2deg;--d:70ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">02</div>
+  <h3 class="pcard__t">Спина и поясница</h3>
+  <p class="pcard__lead">Боль в спине — общее понятие. А причина всегда конкретная.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Все части тела связаны. Компенсаторные механизмы со временем перегружают самые слабые мышцы, на них растёт давление — а это может привести к протрузии или грыже.</p></details>
+</article><article class="pcard tilt reveal" style="--r:-2.2deg;--d:140ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">03</div>
+  <h3 class="pcard__t">Шея</h3>
+  <p class="pcard__lead">Боль в шее — следствие перегрузки и компенсации.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Она связана с увеличением грудного кифоза: тело пытается стабилизироваться, мышцы шеи сокращаются и перенапрягаются, позвоночный столб сжимается — отсюда и симптомы.</p></details>
+</article><article class="pcard tilt reveal" style="--r:2.4deg;--d:210ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">04</div>
+  <h3 class="pcard__t">Сутулость</h3>
+  <p class="pcard__lead">Причины — от строения стопы до увеличенного грудного кифоза.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Влияет и статичное положение плечевого пояса. Тело стремится к стабильности: мышцы шеи напрягаются и укорачиваются, давление на шейный отдел растёт — и сутулость закрепляется.</p></details>
+</article><article class="pcard tilt reveal" style="--r:-0.6deg;--d:280ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">05</div>
+  <h3 class="pcard__t">Плоскостопие</h3>
+  <p class="pcard__lead">Встречается у многих и бьёт по стабильности всего тела.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Со временем деформация увеличивает нагрузку на суставы. Опорно-двигательная система работает как единая цепь, поэтому только комплексный подход замедлит плоскостопие и убережёт от последующих нарушений.</p></details>
+</article><article class="pcard tilt reveal" style="--r:-1.4deg;--d:350ms">
+  <span class="tape tape--tl" aria-hidden="true"></span>
+  <div class="pcard__num">06</div>
+  <h3 class="pcard__t">Спортивная реабилитация</h3>
+  <p class="pcard__lead">Боль в суставах или мышцах — сигнал перегрузки. Не игнорь.</p>
+  <details class="pcard__more"><summary>Подробнее</summary><p>Убираем компенсации, снимаем спазмированные участки и снижаем компрессию на суставы. После этого безопасно возвращаем к тренировкам — и параллельно прокачиваем зоны, которые мешают телу работать в полную силу.</p></details>
+</article></div>
+</section>
+
+<!-- STATS -->
+<section class="stats" aria-label="Цифры с сайта">
+  <div class="stat reveal"><b><span data-count="5000" data-format="space">5 000</span> ₽</b><span>первичный приём</span></div>
+  <div class="stat reveal"><b>6 · 12 · 24</b><span>сессии в блоке — подбираем после осмотра</span></div>
+  <div class="stat reveal"><b data-count="10">10</b><span>человек в команде</span></div>
+  <div class="stat reveal"><b data-count="14">14</b><span>друзей мастерской на нашей стене</span></div>
+</section>
+
+<!-- APPROACH -->
+<section class="sec sec--brick" id="approach">
+  <svg class="tear " viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 60 L0 9.8 L31 27.9 L45 20.4 L70 14.9 L105 19.0 L121 22.0 L151 13.2 L170 33.9 L198 19.4 L222 11.1 L239 16.8 L265 14.0 L281 9.8 L309 14.0 L344 30.4 L356 14.2 L385 13.6 L399 32.3 L425 20.3 L457 29.0 L472 10.5 L494 19.0 L517 27.0 L546 33.6 L559 18.5 L578 30.4 L595 12.9 L618 19.0 L636 14.5 L672 19.5 L706 22.3 L717 34.0 L751 33.2 L786 30.1 L801 20.6 L817 18.4 L829 17.9 L866 14.9 L898 19.8 L920 32.9 L958 22.4 L988 12.0 L1006 33.2 L1033 22.1 L1064 9.5 L1090 21.1 L1124 12.1 L1161 10.1 L1176 23.5 L1205 14.1 L1218 31.1 L1235 23.5 L1262 18.9 L1289 21.6 L1325 13.3 L1355 14.2 L1376 25.5 L1394 16.2 L1426 9.9 L1440 34.0 L1440 60 Z" fill="#0d0d0d"/></svg>
+  <div class="sec-head "><h2 class="spray-title" data-text="КАК МЫ РАБОТАЕМ">КАК МЫ РАБОТАЕМ</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Полный спектр услуг для восстановления подвижности — одним блоком.</p></div>
+  <div class="steps-wrap">
+    <svg class="spray-line" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true"><path id="sprayLine" d="M20 0 C 5 120, 35 240, 20 360 S 5 600, 20 720 S 35 900, 20 1000" pathLength="1"/></svg>
+    <ol class="steps"><li class="step reveal" style="--d:0ms"><div class="step__num" aria-hidden="true">01</div><div class="step__body"><h3>Диагностика</h3><p>Разбираемся в ситуации целиком и ищем истинную первопричину проблемы. Твой организм — единое целое, поэтому если берёмся — то основательно и всесторонне.</p></div></li><li class="step reveal" style="--d:80ms"><div class="step__num" aria-hidden="true">02</div><div class="step__body"><h3>Индивидуальный план</h3><p>Твой случай уникален. Составляем план работы, график посещений и домашнюю программу под твои особенности и реакции организма. Обязательны отчёты и обратная связь — и после сессий, и после домашки.</p></div></li><li class="step reveal" style="--d:160ms"><div class="step__num" aria-hidden="true">03</div><div class="step__body"><h3>Проработка тела</h3><p>Комбинируем работу на кушетке в кабинете и в тренажёрном зале: специалист прорабатывает мускулатуру и закрепляет результат с тобой в зале. Домашняя программа — важная часть результата.</p></div></li><li class="step reveal" style="--d:240ms"><div class="step__num" aria-hidden="true">04</div><div class="step__body"><h3>Удобный сервис</h3><p>Очно или онлайн — администраторы берут на себя всю организацию: график, напоминания, связь со специалистами. Твои специалисты отвечают на вопросы и каждый день разбирают твои отчёты.</p></div></li></ol>
+  </div>
+  <svg class="tear tear--b" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 L0 23.3 L33 8.2 L65 26.2 L85 12.0 L122 16.8 L134 10.5 L168 23.7 L200 27.0 L225 33.3 L246 22.4 L279 24.1 L313 23.0 L343 9.2 L360 15.5 L372 14.1 L385 15.2 L412 17.5 L433 13.4 L450 32.4 L478 23.8 L493 27.0 L508 17.9 L545 24.6 L571 25.8 L605 28.2 L621 8.8 L640 15.0 L656 32.5 L690 16.2 L719 18.3 L754 19.9 L772 14.4 L797 14.8 L824 31.3 L845 13.7 L883 21.2 L895 9.2 L909 24.3 L941 19.0 L953 17.9 L990 21.8 L1028 30.4 L1038 26.7 L1067 22.0 L1084 24.7 L1098 19.3 L1120 32.8 L1155 14.8 L1179 12.6 L1214 30.6 L1233 24.6 L1260 12.0 L1291 22.0 L1323 21.8 L1333 16.4 L1344 32.2 L1378 29.6 L1397 9.5 L1431 32.6 L1440 20.6 L1440 60 Z" fill="#bdf06b"/></svg>
+</section>
+
+<!-- ZAPIS (lime paint) -->
+<section class="zapis" id="zapis">
+  <div class="zapis__paint" aria-hidden="true"></div>
+  <div class="zapis__inner">
+    <div class="zapis__info">
+      <h2 class="spray-title spray-title--dark" data-text="ПЕРВИЧНЫЙ ПРИЁМ">ПЕРВИЧНЫЙ ПРИЁМ</h2>
+      <div class="pricetag reveal"><span>5&nbsp;000&nbsp;₽</span></div>
+      <ul class="checks reveal">
+        <li>Полный осмотр опорно-двигательного аппарата</li>
+        <li>Мышечное тестирование</li>
+        <li>Детальный план реабилитации</li>
+        <li>По итогам — домашняя программа упражнений в видео с описанием и обратной связью</li>
+      </ul>
+      <div class="zapis__notes reveal">
+        <p><b>Дальше — блоки на 6, 12 или 24 сессии.</b> Какой нужен, специалист решит после осмотра.</p>
+        <p><b>Рассрочка:</b> общую сумму можно разделить на несколько платежей по договору.</p>
+        <p><b>Есть МРТ или заключения?</b> Бери с собой на приём.</p>
+      </div>
+    </div>
+    <form class="form reveal" id="leadForm" novalidate>
+      <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--br" aria-hidden="true"></span>
+      <h3 class="form__t">Запишись — перезвоним</h3>
+      <label class="field"><span>Имя *</span><input name="name" type="text" autocomplete="name" required maxlength="60" placeholder="Как к тебе обращаться"></label>
+      <label class="field"><span>Телефон *</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="+7 (___) ___-__-__"></label>
+      <label class="agree"><input type="checkbox" name="agree" required><span>Согласен на обработку персональных данных по <a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/privacy" target="_blank" rel="noopener">Политике</a> и с условиями <a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/oferta" target="_blank" rel="noopener">Оферты</a></span></label>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn--black btn--xl btn--block magnetic" type="submit"><span>Записаться за 5&nbsp;000&nbsp;₽</span></button>
+      <p class="form__err" role="alert" hidden></p>
+      <p class="form__alt">Или сразу: <a href="tel:+79266911805">+7 926 691-18-05</a> · <a href="https://vk.com/nesutulsyamsk" target="_blank" rel="noopener">VK</a></p>
+      <div class="form__ok" hidden>
+        <div class="form__okmark" aria-hidden="true">✓</div>
+        <h3>Заявка у нас!</h3>
+        <p>Перезвоним в рабочее время — 10:00–21:00 по Москве. Не хочешь ждать — набери сам:</p>
+        <a class="btn btn--black btn--block" href="tel:+79266911805">+7 926 691-18-05</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="sec sec--concrete founder" id="founder">
+  <svg class="tear " viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 60 L0 33.9 L12 13.5 L29 32.3 L64 30.9 L84 12.1 L118 26.3 L145 33.7 L173 8.2 L206 15.8 L235 32.4 L248 11.0 L261 22.4 L279 23.7 L309 13.3 L337 14.9 L361 31.5 L394 10.4 L416 15.2 L426 28.0 L454 14.8 L485 22.3 L507 8.3 L519 31.0 L554 22.2 L588 23.1 L602 11.3 L620 31.4 L653 30.4 L688 13.5 L705 10.7 L737 31.0 L758 24.1 L772 32.2 L807 33.4 L839 30.9 L850 27.2 L869 32.2 L902 30.5 L934 14.9 L967 10.8 L1001 30.3 L1017 29.2 L1040 15.9 L1072 13.9 L1083 13.0 L1102 30.5 L1139 15.3 L1167 18.4 L1205 21.9 L1241 11.0 L1278 12.6 L1315 14.9 L1328 19.3 L1359 16.2 L1386 21.3 L1406 23.0 L1423 26.4 L1433 32.1 L1440 26.7 L1440 60 Z" fill="#bdf06b"/></svg>
+  <div class="sec-head "><h2 class="spray-title glitch" data-text="КИРИЛЛ ТУМАРЕЦ">КИРИЛЛ ТУМАРЕЦ</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Основатель проекта «НеСутулься» · ведущий реабилитолог</p></div>
+  <div class="founder__grid">
+    <div class="founder__left">
+      <div class="founder__ava tilt reveal"><img src="assets/img/team/tumarec.webp" alt="Кирилл Тумарец, иллюстрация" width="420" height="420" loading="lazy" decoding="async"><span class="founder__badge">ведущий<br>реабилитолог</span></div>
+      <blockquote class="quote reveal"><p>Не можешь изменить — создай своё и&nbsp;возглавь!</p><cite>Кирилл Тумарец</cite></blockquote>
+      <a class="podcast reveal" href="https://music.yandex.ru/album/21096211/track/100491307" target="_blank" rel="noopener"><span class="podcast__ic" aria-hidden="true">▶</span><span>Подкаст «Что нужно человеку для счастья?» — на Яндекс Музыке</span></a>
+    </div>
+    <div class="founder__right">
+      <div class="qual reveal">
+        <h3 class="h3-tag">Образование</h3>
+        <ul class="qual__list">
+          <li>Диплом магистра МГАФК — адаптивная физическая культура</li>
+          <li>Диплом бакалавра МГАФК — адаптивная физическая культура</li>
+          <li>Медицинский брат — среднее профессиональное образование</li>
+          <li>Сертификат специалиста: рентгенология</li>
+          <li>Повышение квалификации: рентгенология</li>
+        </ul>
+      </div>
+      <h3 class="h3-tag reveal">Путь</h3>
+      <ol class="path"><li class="reveal" style="--d:0ms"><b>Фитнес</b><span>Начинал персональным тренером — в залах и онлайн. Сначала это было личное увлечение.</span></li><li class="reveal" style="--d:90ms"><b>Реанимация</b><span>Бесценный опыт: каждый день — борьба за жизнь и стабилизацию состояния здесь и сейчас.</span></li><li class="reveal" style="--d:180ms"><b>Медобеспечение МВД</b><span>Медицина с другой стороны — полное погружение в лучевую диагностику.</span></li><li class="reveal" style="--d:270ms"><b>Реабилитация</b><span>Работа по второму профильному образованию — реабилитолог. Плюс постоянное повышение квалификации: выезды и государственные курсы.</span></li><li class="reveal" style="--d:360ms"><b>2018 · «НеСутулься»</b><span>Свой опыт, подходы реабилитационных центров и протоколы восстановления разных клиник и стран — в одну концепцию.</span></li></ol>
+      <div class="manifest reveal">
+        <p>Везде не хватало индивидуальности и полного, комплексного погружения в проблему — одним блоком. Отсюда принцип: минимум дополнительных продаж (продление — только в особых случаях после операций), а в стоимость входит работа со <b>всем</b> опорно-двигательным аппаратом.</p>
+        <p>Специалист делает работу от и до — не думая, что «это уже другой блок». Цель — показать, что комплексный подход и профессиональный уровень есть и в России.</p>
+      </div>
+    </div>
+  </div>
+  <div class="docs" aria-label="Документы об образовании"><button class="polaroid" style="--r:-5deg" data-full="assets/img/docs/dip_mag.webp" aria-label="Открыть: Диплом магистра МГАФК"><img src="assets/img/docs/dip_mag-t.webp" alt="Диплом магистра МГАФК" width="420" height="310" loading="lazy" decoding="async"><span>Диплом магистра МГАФК</span></button><button class="polaroid" style="--r:3deg" data-full="assets/img/docs/dip_bak.webp" aria-label="Открыть: Диплом бакалавра МГАФК"><img src="assets/img/docs/dip_bak-t.webp" alt="Диплом бакалавра МГАФК" width="420" height="310" loading="lazy" decoding="async"><span>Диплом бакалавра МГАФК</span></button><button class="polaroid" style="--r:-2deg" data-full="assets/img/docs/dip_med.webp" aria-label="Открыть: Диплом медицинского брата"><img src="assets/img/docs/dip_med-t.webp" alt="Диплом медицинского брата" width="420" height="310" loading="lazy" decoding="async"><span>Диплом медицинского брата</span></button><button class="polaroid" style="--r:4deg" data-full="assets/img/docs/dip_rent.webp" aria-label="Открыть: Сертификат: рентгенология"><img src="assets/img/docs/dip_rent-t.webp" alt="Сертификат: рентгенология" width="420" height="310" loading="lazy" decoding="async"><span>Сертификат: рентгенология</span></button><button class="polaroid" style="--r:-3deg" data-full="assets/img/docs/dip_pk.webp" aria-label="Открыть: Повышение квалификации: рентгенология"><img src="assets/img/docs/dip_pk-t.webp" alt="Повышение квалификации: рентгенология" width="420" height="310" loading="lazy" decoding="async"><span>Повышение квалификации: рентгенология</span></button></div>
+</section>
+
+<!-- TEAM -->
+<section class="sec sec--dark" id="team">
+  <div class="sec-head "><h2 class="spray-title" data-text="КОМАНДА">КОМАНДА</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Реабилитологи, врач, тренер и админы, которые найдут тебе время.</p></div>
+  <div class="tgrid"><article class="tm tilt reveal tm--lead" style="--d:0ms">
+  <div class="tm__ava"><img src="assets/img/team/tumarec.webp" alt="Тумарец Кирилл Михайлович" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Тумарец Кирилл Михайлович</h3><p class="tm__role">Основатель · ведущий реабилитолог</p>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Диплом магистра: «Физическая культура для лиц с отклонениями в состоянии здоровья. Адаптивная физическая культура»</li><li>Диплом бакалавра МГАФК: «Физическая культура для лиц с отклонениями в состоянии здоровья. Адаптивная физическая культура»</li><li>Среднее профессиональное образование, квалификация «Медицинский брат»</li><li>Сертификат специалиста: рентгенология</li><li>Удостоверение о повышении квалификации</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:60ms">
+  <div class="tm__ava"><img src="assets/img/team/kovaltsova.webp" alt="Ковальцова Анастасия Максимовна" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Ковальцова Анастасия Максимовна</h3>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Диплом бакалавра с отличием МГАФК: «Адаптивная физическая культура для лиц с отклонениями в состоянии здоровья»</li><li>Диплом с отличием о среднем профессиональном образовании, квалификация «Акушерка»</li><li>Сертификат специалиста «Медицинский массаж»</li><li>Удостоверение о повышении квалификации: кинезиотейпирование</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:120ms">
+  <div class="tm__ava"><img src="assets/img/team/suslov.webp" alt="Суслов Артём Денисович" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Суслов Артём Денисович</h3>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Диплом бакалавра МГАФК: «Физическая культура для лиц с отклонениями в состоянии здоровья. Адаптивная физическая культура»</li><li>Сертификат специалиста «Массаж»</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:180ms">
+  <div class="tm__ava"><img src="assets/img/team/rigin.webp" alt="Ригин Николай Владимирович" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Ригин Николай Владимирович</h3><p class="tm__role">Врач · травматолог-ортопед · к.м.н.</p>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Первый МГМУ им. И. М. Сеченова, врач по специальности «Лечебное дело»</li><li>Аспирантура «Клиническая медицина», квалификация «Исследователь. Преподаватель-исследователь»</li><li>Ординатура «Травматология и ортопедия»</li><li>Сертификат аккредитации специалиста</li><li>Учёная степень: кандидат медицинских наук</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:240ms">
+  <div class="tm__ava"><img src="assets/img/team/ntumarec.webp" alt="Тумарец Наталья Юрьевна" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Тумарец Наталья Юрьевна</h3>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Диплом «Менеджер по продажам»</li><li>Маркетинг</li><li>Диплом бакалавра МГАФК: «Физическая культура для лиц с отклонениями в состоянии здоровья. Адаптивная физическая культура»</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:0ms">
+  <div class="tm__ava"><img src="assets/img/team/korelina.webp" alt="Корелина Екатерина Николаевна" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Корелина Екатерина Николаевна</h3>
+  <details class="tm__q"><summary>Образование</summary><ul><li>РУС ГЦОЛИФК: физическая культура для лиц с отклонениями в состоянии здоровья (адаптивная физическая культура)</li><li>РУС ГЦОЛИФК, повышение квалификации: инклюзивное волонтёрство в сфере физической культуры и спорта</li><li>Московский институт восстановительной медицины: детский массаж</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:60ms">
+  <div class="tm__ava"><img src="assets/img/team/maslov.webp" alt="Маслов Евгений Дмитриевич" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Маслов Евгений Дмитриевич</h3><p class="tm__role">Персональный тренер категории «Мастер»</p>
+  <details class="tm__q"><summary>Образование</summary><ul><li>Специализация: функциональный тренинг и упражнения на выносливость, ОФП, коррекция фигуры, тренировки со свободным весом</li><li>Индивидуальные программы тренировок и питания, тренировки для начинающих</li><li>Обучение: персональный тренер категории «Мастер», ООО «Учёный фитнес»</li><li>Курсы: основы оздоровительной физической культуры при болях; особенности тренировок при болях в спине</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:120ms">
+  <div class="tm__ava"><img src="assets/img/team/nayana.webp" alt="Наяна" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Наяна</h3><p class="tm__role">Креативный книжный гуру</p>
+  <details class="tm__q"><summary>Кто это</summary><ul><li>Найдёт удобное время на приём — и обсудит с тобой любимый роман. А ещё мастер по вкусному чаю и уютной атмосфере.</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:180ms">
+  <div class="tm__ava"><img src="assets/img/team/katya.webp" alt="Катя" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Катя</h3><p class="tm__role">Человек-организатор</p>
+  <details class="tm__q"><summary>Кто это</summary><ul><li>Серьёзная, внимательная и немного сыщик: найдёт удобное время, даже если в расписании его официально нет. Кажется, что всё занято? Подожди — Катя всё уладит.</li></ul></details>
+</article><article class="tm tilt reveal" style="--d:240ms">
+  <div class="tm__ava"><img src="assets/img/team/polina.webp" alt="Полина" width="420" height="420" loading="lazy" decoding="async"></div>
+  <h3 class="tm__name">Полина</h3><p class="tm__role">Голос разума и спокойствия</p>
+  <details class="tm__q"><summary>Кто это</summary><ul><li>Рассудительная и внимательная: всегда знает, что, где и когда, и найдёт ответ на самый каверзный вопрос. Благодаря ей всё красиво и понятно — и в расписании, и в визуальном стиле мастерской.</li></ul></details>
+</article></div>
+</section>
+
+<div class="tape-band"><div class="ctape ctape--y ctape--rev" aria-hidden="true"><div class="ctape__track"><span>ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ </span><span>ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ ОСТОРОЖНО: ОСАНКА ✦ НЕ СУТУЛЬСЯ ✦ НАЙДЁМ ПРИЧИНУ ✦ ИСПРАВИМ ✦ </span></div></div></div>
+
+<!-- FRIENDS -->
+<section class="sec sec--brick friends" id="friends">
+  <div class="sec-head "><h2 class="spray-title" data-text="НАМ ДОВЕРЯЮТ">НАМ ДОВЕРЯЮТ</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Спортсмены, артисты и друзья мастерской — на нашей стене.</p></div>
+  <div class="wall" id="wall"><figure class="poster reveal" style="--r:-2.2deg;--d:0ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/felikidi.webp" alt="Георгий Феликиди в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Георгий Феликиди</b><span>Многократный призёр российских соревнований по сёрфингу, участник ISA World Surfing Games</span></figcaption>
+</figure><figure class="poster reveal" style="--r:1.9deg;--d:60ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/belyakova.webp" alt="Алёна Белякова в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Алёна Белякова</b><span>Вице-чемпионка мира по вейксёрфингу</span></figcaption>
+</figure><figure class="poster reveal" style="--r:1.4deg;--d:120ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/lenchevsky.webp" alt="Ярослав Ленчевский в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Ярослав Ленчевский</b><span>Многократный чемпион по сноуборду</span></figcaption>
+</figure><figure class="poster reveal" style="--r:3.1deg;--d:180ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/saprykin.webp" alt="Иван Сапрыкин в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Иван Сапрыкин</b><span>Отец уличного футбола</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-3.3deg;--d:0ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/gumilina.webp" alt="Яна Гумилина в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Яна Гумилина</b><span>Чемпионка по вейксёрфингу</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-0.6deg;--d:60ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/ivanov.webp" alt="Евгений Иванов в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Евгений Иванов</b><span>Сноубордист, призёр России и Европы</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-3.8deg;--d:120ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/kokorev.webp" alt="Константин Кокорев в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Константин Кокорев</b><span>Кинооператор, кинорежиссёр, сценарист, сценограф</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-2.3deg;--d:180ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/sokolovsky.webp" alt="Александр Соколовский в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Александр Соколовский</b><span>Актёр театра и кино</span></figcaption>
+</figure><figure class="poster reveal" style="--r:0.0deg;--d:0ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/antyasova.webp" alt="Тианина Антясова в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Тианина Антясова</b><span>Сноубордистка</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-3.8deg;--d:60ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/belotserkovsky.webp" alt="Антон Белоцерковский в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Антон Белоцерковский</b><span>Спортивный судья</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-2.4deg;--d:120ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/khudoleeva.webp" alt="Ольга Худолеева в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Ольга Худолеева</b><span>Сноубордистка, спортсменка ГБУ</span></figcaption>
+</figure><figure class="poster reveal" style="--r:1.2deg;--d:180ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/kosobukina.webp" alt="Ирина Кособукина в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Ирина Кособукина</b><span>Сёрфингистка</span></figcaption>
+</figure><figure class="poster reveal" style="--r:0.4deg;--d:0ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/andreev.webp" alt="Константин Андреев в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Константин Андреев</b><span>BMX-фристайл</span></figcaption>
+</figure><figure class="poster reveal" style="--r:-2.2deg;--d:60ms">
+  <span class="tape tape--t" aria-hidden="true"></span>
+  <img src="assets/img/friends/agaev.webp" alt="Эдуард Агаев в мастерской «НеСутулься»" width="480" height="640" loading="lazy" decoding="async">
+  <figcaption><b>Эдуард Агаев</b><span>Предприниматель, друг мастерской</span></figcaption>
+</figure></div>
+  <p class="wall__hint" aria-hidden="true">← листай →</p>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec--concrete" id="faq">
+  <svg class="tear " viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 60 L0 27.3 L29 17.5 L41 25.3 L60 16.2 L94 26.7 L112 16.0 L134 18.5 L152 11.3 L174 32.4 L203 31.5 L230 15.8 L255 8.0 L273 19.2 L299 25.0 L322 19.5 L338 20.3 L374 28.7 L388 10.2 L413 24.5 L432 29.3 L463 25.5 L480 13.2 L490 14.4 L514 30.1 L526 18.8 L553 13.1 L583 20.9 L600 25.1 L610 27.5 L641 10.8 L663 12.6 L700 21.5 L711 14.5 L745 19.9 L778 25.4 L815 23.5 L852 31.2 L879 26.7 L903 29.6 L928 31.3 L959 20.3 L977 14.4 L1004 27.9 L1029 24.3 L1047 10.0 L1065 15.1 L1084 22.0 L1098 14.0 L1127 26.4 L1139 18.6 L1164 18.8 L1180 18.9 L1215 23.2 L1245 30.3 L1276 17.9 L1286 17.1 L1317 30.2 L1354 18.9 L1385 22.2 L1412 13.7 L1428 19.3 L1439 16.7 L1440 18.5 L1440 60 Z" fill="#121010"/></svg>
+  <div class="sec-head "><h2 class="spray-title" data-text="ВОПРОСЫ">ВОПРОСЫ</h2><svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg><p class="sec-sub reveal">Отвечаем честно и без воды.</p></div>
+  <div class="faq"><details class="qa reveal"><summary><span>Сколько сессий мне нужно?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>Зависит от твоего случая. Есть блоки на 6, 12 и 24 сессии — какой подходит, специалист определит после осмотра и оценки состояния. Точное количество станет ясно только после первичной консультации.</p></div></details><details class="qa reveal"><summary><span>Как быстро будет результат?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>У каждой проблемы свой срок — он зависит от сложности и особенностей. Реабилитация — совместная работа специалиста и пациента: кроме сессий в мастерской важны упражнения дома, регулярная домашка и письменный отчёт о состоянии. Результат зависит от твоей активности и соблюдения рекомендаций.</p></div></details><details class="qa reveal"><summary><span>Какие исследования понадобятся?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>Не всегда нужны. Если есть заключение и снимки МРТ — обязательно возьми их на первичный приём. Если для точной диагностики понадобятся КТ, МРТ, рентген или анализы крови, специалист направит тебя на них. Поэтому сначала проконсультируйся по своей проблеме, а потом иди на исследования.</p></div></details><details class="qa reveal"><summary><span>Кто курирует реабилитацию?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>Весь процесс — от начала до конца — под контролем ведущего специалиста Кирилла Михайловича Тумарца.</p></div></details><details class="qa reveal"><summary><span>Из чего складывается стоимость?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>В первичный приём входят сбор анамнеза и разработка плана действий. По его итогам ты получаешь индивидуальный план упражнений на дому в видеоформате — с подробным описанием и обратной связью после выполнения. Если вопрос вне компетенции реабилитолога, специалист порекомендует другого врача. На сессиях работаем со всем опорно-двигательным аппаратом и применяем нужные техники и манипуляции.</p></div></details><details class="qa reveal"><summary><span>Можно в рассрочку?</span><i aria-hidden="true"></i></summary><div class="qa__a"><p>Да: при оплате сеансов можно внести корректировку в договор и разделить общую сумму на несколько платежей.</p></div></details></div>
+  <p class="faq__more reveal">Остались вопросы? <a href="https://vk.com/nesutulsyamsk" target="_blank" rel="noopener">Напиши нам в VK</a> или <a href="tel:+79266911805">позвони</a>.</p>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+  <div class="contacts__bg" data-speed="0.15" aria-hidden="true"><img src="assets/img/gym.webp" alt="" width="1600" height="1068" loading="lazy" decoding="async"></div>
+  <div class="contacts__inner">
+    <h2 class="spray-title" data-text="ПРИХОДИ К НАМ">ПРИХОДИ К НАМ</h2>
+    <div class="ccard reveal">
+      <span class="tape tape--tl" aria-hidden="true"></span>
+      <p class="ccard__addr"><span class="pin" aria-hidden="true"></span>Москва, проспект Будённого, 30А</p>
+      <p><a class="ccard__phone" href="tel:+79266911805">+7 926 691-18-05</a></p>
+      <p class="ccard__hours">10:00–21:00 по Москве · <span data-status class="status status--inline"><i></i><span></span></span></p>
+      <div class="ccard__btns">
+        <a class="btn btn--lime magnetic" href="#zapis">Записаться</a>
+        <a class="btn btn--ghost magnetic" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%91%D1%83%D0%B4%D1%91%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%2C%2030%D0%90" target="_blank" rel="noopener">Маршрут</a>
+        <a class="btn btn--ghost magnetic" href="https://yandex.ru/profile/121562048508" target="_blank" rel="noopener">Отзывы на Яндексе</a>
+      </div>
+      <div class="socials">
+        <a href="https://vk.com/nesutulsyamsk" target="_blank" rel="noopener" aria-label="VK"><svg viewBox="0 0 24 24"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.3h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9c-.5 2.7-2.5 4.7-3.9 5.5 1.4.7 3.7 2.4 4.5 5.7h-3.2c-.7-2.2-2.4-3.9-4.6-4.1v4.1h-.3z"/></svg></a>
+        <a href="https://max.ru/u/f9LHodD0cOLMzAI36uleGwtlG1o5OJuSy3wv-tKM3VBHfp3Mo9QRLDeDey0" target="_blank" rel="noopener" aria-label="MAX"><b>MAX</b></a>
+        <a href="https://rutube.ru/channel/27963576/" target="_blank" rel="noopener" aria-label="Rutube"><b>R</b></a>
+        <a href="https://vkvideo.ru/@club231053786" target="_blank" rel="noopener" aria-label="VK Видео"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></a>
+      </div>
+    </div>
+    <a class="goodplace reveal" href="https://yandex.ru/profile/121562048508" target="_blank" rel="noopener"><img src="assets/img/goodplace.webp" alt="Награда Яндекс Карт «Хорошее место»" width="360" height="450" loading="lazy" decoding="async"></a>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="ftr__top">
+    <img class="ftr__logo" src="assets/img/logo.webp" alt="НеСутулься" width="900" height="197" loading="lazy">
+    <nav class="ftr__nav" aria-label="Ещё">
+      <div><b>Разделы</b><a href="#problems">Что болит</a><a href="#approach">Подход</a><a href="#founder">Основатель</a><a href="#team">Команда</a><a href="#friends">Нам доверяют</a></div>
+      <div><b>Ещё у нас</b><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/shop" target="_blank" rel="noopener">Услуги</a><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/orto" target="_blank" rel="noopener">Стельки</a><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/store" target="_blank" rel="noopener">Мерч</a><a href="https://music.yandex.ru/album/21096211/track/100491307" target="_blank" rel="noopener">Подкаст</a></div>
+      <div><b>Медиа</b><a href="https://vk.com/nesutulsyamsk" target="_blank" rel="noopener">VK</a><a href="https://vkvideo.ru/@club231053786" target="_blank" rel="noopener">VK Видео</a><a href="https://rutube.ru/channel/27963576/" target="_blank" rel="noopener">Rutube</a><a href="https://max.ru/id772086427984_biz" target="_blank" rel="noopener">MAX</a></div>
+    </nav>
+  </div>
+  <div class="ftr__bottom">
+    <p>ИП Тумарец Кирилл Михайлович · ОГРНИП 319774600434803 · ИНН 772086427984</p>
+    <p class="ftr__legal"><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/privacy" target="_blank" rel="noopener">Политика обработки персональных данных</a><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/cookie" target="_blank" rel="noopener">Политика cookie</a><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/ps" target="_blank" rel="noopener">Пользовательское соглашение</a><a href="https://xn----itbtfwbfhb5g8a.xn--p1ai/oferta" target="_blank" rel="noopener">Публичная оферта</a></p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Быстрые действия">
+  <a href="tel:+79266911805"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Позвонить</a>
+  <a href="#zapis" class="mbar__main">Записаться</a>
+  <a href="https://vk.com/nesutulsyamsk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.3h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9c-.5 2.7-2.5 4.7-3.9 5.5 1.4.7 3.7 2.4 4.5 5.7h-3.2c-.7-2.2-2.4-3.9-4.6-4.1v4.1h-.3z"/></svg>Написать</a>
+</nav>
+
+<div class="lightbox" id="lightbox" hidden><button class="lightbox__x" aria-label="Закрыть">×</button><img alt=""></div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
