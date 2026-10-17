@@ -751,3 +751,5 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
   .ben{font-size:11.5px;padding:14px 8px;hyphens:auto;overflow-wrap:anywhere}
   .zapis .spray-title--long{font-size:clamp(28px,8.4vw,48px)}
 }
+.prose tr.grp td:last-child{text-align:left}
+@media (max-width:760px){#docs .spray-title{font-size:clamp(30px,9.4vw,48px)}}
