@@ -764,3 +764,4 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 .mnav .status{color:var(--mute)}.mnav .status.is-open{color:var(--lime)}.mnav .status.is-open i{background:var(--lime)}
 @media (prefers-reduced-motion:reduce){.mnav nav a{opacity:1!important;transform:none!important;transition:none!important}}
 .hdr__nav a{color:#f2f2ec;opacity:.9}
+.cookie{z-index:102}
