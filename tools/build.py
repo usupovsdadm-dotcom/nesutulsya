@@ -30,7 +30,7 @@ def page(slug, active, title, desc, body, zapis_href=None, og_title=None):
 {ftr}
 <!-- /@ftr -->
 
-<script src="{P}js/main.js?v=6" defer></script>
+<script src="{P}js/main.js?v=7" defer></script>
 </body>
 </html>
 '''
@@ -97,41 +97,41 @@ def block_lead(n, w):
 # (id, заголовок группы, [услуги]); услуга: dict(t, price, img, ava, where, lead, more, osm)
 SHOP = [
  ('cons', 'Консультации', [
-   dict(t='Консультация специалиста Тумарца К.М.', price=5000, img='shop/svc-cons-lead.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
-   dict(t='Консультация специалиста Суслова А.Д.', price=4000, img='shop/svc-cons.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
+   dict(t='Консультация специалиста Тумарца К.М.', price=5000, where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
+   dict(t='Консультация специалиста Суслова А.Д.', price=4000, where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
  ]),
  ('sess', 'Сессии', [
-   dict(t='Разовая сессия', price=8000, img='shop/svc-sess-1.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
-   dict(t='Блок 6 сессий', price=45900, img='shop/svc-sess-6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Блок 12 сессий', price=88800, img='shop/svc-sess-12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Блок 24 сессии', price=168000, img='shop/svc-sess-24.webp', lead='Блок из двадцати четырех сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Разовая сессия', price=8000, lead=SESS_LEAD, more=SESS_MORE, osm=True),
+   dict(t='Блок 6 сессий', price=45900, lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Блок 12 сессий', price=88800, lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Блок 24 сессии', price=168000, lead='Блок из двадцати четырех сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
  ]),
  ('vyezd', 'Выезд', [
-   dict(t='Выезд. Разовая сессия', price=8000, img='shop/svc-vyezd-1.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
-   dict(t='Выезд. Блок 6 сессий', price=45900, img='shop/svc-vyezd-6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Выезд. Блок 12 сессий', price=88800, img='shop/svc-vyezd-12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Выезд. Разовая сессия', price=8000, lead=SESS_LEAD, more=SESS_MORE, osm=True),
+   dict(t='Выезд. Блок 6 сессий', price=45900, lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Выезд. Блок 12 сессий', price=88800, lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
  ]),
  ('zal', 'Зал', [
-   dict(t='Разовое индивидуальное занятие с инструктором', price=5000, img='shop/svc-zal-1.webp', lead='Индивидуальное занятие с инструктором.', osm=True),
-   dict(t='Блок 10 индивидуальных занятий с инструктором', price=40000, img='shop/svc-zal-10.webp', osm=True),
+   dict(t='Разовое индивидуальное занятие с инструктором', price=5000, lead='Индивидуальное занятие с инструктором.', osm=True),
+   dict(t='Блок 10 индивидуальных занятий с инструктором', price=40000, osm=True),
  ]),
  ('stelki', 'Стельки', [
-   dict(t='Индивидуальные стельки', price=9500, img='orto/insole.webp', lead='В стоимость входит два этапа посещения: 1.&nbsp;Изготовление стелек. 2.&nbsp;Коррекция через назначенное время.', link=('Подробнее о стельках', 'orto/')),
-   dict(t='Коррекция стелек', price=3500, img='shop/svc-insole-fix.webp'),
+   dict(t='Индивидуальные стельки', price=9500, lead='В стоимость входит два этапа посещения: 1.&nbsp;Изготовление стелек. 2.&nbsp;Коррекция через назначенное время.', link=('Подробнее о стельках', 'orto/')),
+   dict(t='Коррекция стелек', price=3500),
  ]),
  ('online', 'Онлайн', [
-   dict(t='Онлайн. Разовая сессия', price=5000, img='shop/svc-online-1.webp', osm=True),
-   dict(t='Онлайн. Блок 6 сессий', price=27000, img='shop/svc-online-6.webp', osm=True),
-   dict(t='Онлайн. Блок 12 сессий', price=48000, img='shop/svc-online-12.webp', osm=True),
+   dict(t='Онлайн. Разовая сессия', price=5000, osm=True),
+   dict(t='Онлайн. Блок 6 сессий', price=27000, osm=True),
+   dict(t='Онлайн. Блок 12 сессий', price=48000, osm=True),
  ]),
  ('fitness', 'Фитнес', [
-   dict(t='Фитнес онлайн. Разовое занятие', price=5000, img='shop/svc-fit-1.webp', osm=True),
-   dict(t='Фитнес онлайн. Блок 10 занятий', price=40000, img='shop/svc-fit-10.webp', osm=True),
+   dict(t='Фитнес онлайн. Разовое занятие', price=5000, osm=True),
+   dict(t='Фитнес онлайн. Блок 10 занятий', price=40000, osm=True),
  ]),
  ('massage', 'Массаж', [
-   dict(t='Массаж 30 минут', price=2500, img='shop/svc-massage-30.webp'),
-   dict(t='Массаж 60 минут', price=4500, img='shop/svc-massage-60.webp'),
-   dict(t='Массаж 90 минут', price=6500, img='shop/svc-massage-90.webp'),
+   dict(t='Массаж 30 минут', price=2500),
+   dict(t='Массаж 60 минут', price=4500),
+   dict(t='Массаж 90 минут', price=6500),
  ]),
 ]
 
