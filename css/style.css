@@ -765,3 +765,4 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 @media (prefers-reduced-motion:reduce){.mnav nav a{opacity:1!important;transform:none!important;transition:none!important}}
 .hdr__nav a{color:#f2f2ec;opacity:.9}
 .cookie{z-index:102}
+.cert__img img{width:100%;height:auto;display:block}

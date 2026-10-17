@@ -30,7 +30,7 @@ def page(slug, active, title, desc, body, zapis_href=None, og_title=None):
 {ftr}
 <!-- /@ftr -->
 
-<script src="{P}js/main.js?v=5" defer></script>
+<script src="{P}js/main.js?v=6" defer></script>
 </body>
 </html>
 '''
