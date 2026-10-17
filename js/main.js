@@ -16,6 +16,11 @@
 
   // ====== PRELOADER ======
   var pre = $('#preloader');
+  // прелоадер играет только на главной и только при первом заходе за сессию
+  try {
+    if (pre && sessionStorage.getItem('ns_pre')) { pre.remove(); pre = null; document.body.classList.remove('is-loading'); }
+    else if (pre) sessionStorage.setItem('ns_pre', '1');
+  } catch (e) {}
   function finishPreload() {
     if (!pre || pre.classList.contains('is-done')) return;
     pre.classList.add('is-done');
@@ -25,7 +30,7 @@
     slapStickers();
   }
   function runPreloader() {
-    if (!pre) { document.body.classList.add('is-ready'); return; }
+    if (!pre) { document.body.classList.remove('is-loading'); document.body.classList.add('is-ready'); setTimeout(slapStickers, 0); return; }
     if (reduce) { finishPreload(); return; }
     var cv = $('#preFx'), path = $('#sprayPath'), svg = $('.preloader__logo');
     var ctx = cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -325,10 +330,23 @@
   // ====== FAQ: one open at a time ======
   $$('.qa').forEach(function (d) { d.addEventListener('toggle', function () { if (d.open) $$('.qa').forEach(function (o) { if (o !== d) o.open = false; }); }); });
 
-  // ====== FORM ======
-  var form = $('#leadForm');
-  if (form) {
+  // ====== FORMS (все формы .lead на странице) ======
+  // POST JSON {name, phone, page[, service]} на FORM_ENDPOINT
+  function needOsmotr(form) {
+    var sel = form.elements.service;
+    if (!sel || !sel.options) return false;
+    var o = sel.options[sel.selectedIndex];
+    return !!(o && o.getAttribute('data-osmotr'));
+  }
+  function syncOsmotr(form) {
+    var box = $('[data-osmotr-box]', form); if (!box) return;
+    var need = needOsmotr(form); box.hidden = !need;
+    if (!need) { box.querySelector('input').checked = false; box.querySelector('input').classList.remove('is-bad'); }
+  }
+  $$('form.lead').forEach(function (form) {
     var phone = form.elements.phone, err = $('.form__err', form), ok = $('.form__ok', form);
+    if (form.elements.service && form.elements.service.options) form.elements.service.addEventListener('change', function () { syncOsmotr(form); });
+    syncOsmotr(form);
     phone.addEventListener('input', function () {
       var d = phone.value.replace(/\D/g, '');
       if (d[0] === '8') d = '7' + d.slice(1);
@@ -343,25 +361,64 @@
     });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var name = form.elements.name, agree = form.elements.agree, bad = [];
-      [name, phone, agree].forEach(function (el) { el.classList.remove('is-bad'); });
+      var name = form.elements.name, agree = form.elements.agree, osm = form.elements.osmotr, bad = [];
+      [name, phone, agree, osm].forEach(function (el) { el && el.classList.remove('is-bad'); });
       if (name.value.trim().length < 2) bad.push(name);
       if (phone.value.replace(/\D/g, '').length !== 11) bad.push(phone);
       if (!agree.checked) bad.push(agree);
+      var osmBad = osm && needOsmotr(form) && !osm.checked;
+      if (osmBad) bad.push(osm);
       if (bad.length) {
         bad.forEach(function (el) { void el.offsetWidth; el.classList.add('is-bad'); });
-        err.textContent = !agree.checked && bad.length === 1 ? 'Поставь галочку согласия — без неё не можем принять заявку.' : 'Проверь имя и телефон — нужен номер из 11 цифр.';
+        err.textContent = osmBad && bad.length === 1 ? 'Эту услугу можно взять только после осмотра — подтверди галочкой или выбери первичный приём.'
+          : (!agree.checked && bad.length === 1 ? 'Поставь галочку согласия — без неё не можем принять заявку.' : 'Проверь имя и телефон — нужен номер из 11 цифр.');
         err.hidden = false; bad[0].focus(); return;
       }
       err.hidden = true;
       if (form.elements.website.value) return; // бот
       var btn = form.querySelector('[type=submit]'); btn.disabled = true;
       var payload = { name: name.value.trim(), phone: phone.value, page: location.href };
-      var done = function () { ok.hidden = false; btn.disabled = false; form.reset(); };
+      if (form.elements.service && form.elements.service.value) payload.service = form.elements.service.value;
+      var done = function () { ok.hidden = false; btn.disabled = false; form.reset(); syncOsmotr(form); };
       if (!FORM_ENDPOINT) { setTimeout(done, 500); return; }
       fetch(FORM_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
         .catch(function () { btn.disabled = false; err.innerHTML = 'Не получилось отправить. Позвони нам: <a href="tel:+79266911805">+7 926 691-18-05</a>'; err.hidden = false; });
+    });
+  });
+
+  // ====== КНОПКИ «ЗАПИСАТЬСЯ» У УСЛУГ: подставляем услугу в форму ======
+  $$('[data-service]').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      var form = $('form.lead'), sel = form && form.elements.service;
+      if (!sel) return;
+      e.preventDefault();
+      sel.value = b.getAttribute('data-service'); syncOsmotr(form);
+      var ok = $('.form__ok', form); if (ok) ok.hidden = true;
+      var z = $('#zapis'); if (z) z.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      setTimeout(function () { try { form.elements.name.focus({ preventScroll: true }); } catch (x) {} }, reduce ? 0 : 700);
+    });
+  });
+
+  // ====== ЧИПСЫ-ЯКОРЯ: подсветка текущего раздела ======
+  var chips = $$('.chips a');
+  if (chips.length && 'IntersectionObserver' in window) {
+    var chipIo = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        chips.forEach(function (c) { c.classList.toggle('is-active', c.getAttribute('href') === '#' + en.target.id); });
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    chips.forEach(function (c) { var t = document.getElementById(c.getAttribute('href').slice(1)); if (t) chipIo.observe(t); });
+  }
+
+  // ====== COOKIE ======
+  var ck = $('#cookie');
+  if (ck) {
+    var seen = null; try { seen = localStorage.getItem('ns_cookie'); } catch (e) {}
+    if (!seen) { ck.hidden = false; setTimeout(function () { ck.classList.add('is-shown'); }, 1800); }
+    $$('[data-cookie]', ck).forEach(function (b) {
+      b.addEventListener('click', function () { try { localStorage.setItem('ns_cookie', b.getAttribute('data-cookie')); } catch (e) {} ck.classList.remove('is-shown'); setTimeout(function () { ck.hidden = true; }, 500); });
     });
   }
 })();

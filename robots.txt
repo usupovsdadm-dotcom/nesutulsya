@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://usupovsdadm-dotcom.github.io/nesutulsya/sitemap.xml
