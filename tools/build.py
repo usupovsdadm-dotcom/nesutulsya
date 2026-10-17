@@ -97,41 +97,41 @@ def block_lead(n, w):
 # (id, заголовок группы, [услуги]); услуга: dict(t, price, img, ava, where, lead, more, osm)
 SHOP = [
  ('cons', 'Консультации', [
-   dict(t='Консультация специалиста Тумарца К.М.', price=5000, ava='team/tumarec.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
-   dict(t='Консультация специалиста Суслова А.Д.', price=4000, ava='team/suslov.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
+   dict(t='Консультация специалиста Тумарца К.М.', price=5000, img='shop/svc-cons-lead.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
+   dict(t='Консультация специалиста Суслова А.Д.', price=4000, img='shop/svc-cons.webp', where='В заведении / Онлайн', lead=CONS_LEAD, more=CONS_MORE),
  ]),
  ('sess', 'Сессии', [
-   dict(t='Разовая сессия', price=8000, img='shop/session.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
-   dict(t='Блок 6 сессий', price=45900, img='shop/h6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Блок 12 сессий', price=88800, img='shop/h12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Блок 24 сессии', price=168000, img='shop/h24.webp', lead='Блок из двадцати четырех сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Разовая сессия', price=8000, img='shop/svc-sess-1.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
+   dict(t='Блок 6 сессий', price=45900, img='shop/svc-sess-6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Блок 12 сессий', price=88800, img='shop/svc-sess-12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Блок 24 сессии', price=168000, img='shop/svc-sess-24.webp', lead='Блок из двадцати четырех сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
  ]),
  ('vyezd', 'Выезд', [
-   dict(t='Выезд. Разовая сессия', price=8000, img='shop/session.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
-   dict(t='Выезд. Блок 6 сессий', price=45900, img='shop/h6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
-   dict(t='Выезд. Блок 12 сессий', price=88800, img='shop/h12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Выезд. Разовая сессия', price=8000, img='shop/svc-vyezd-1.webp', lead=SESS_LEAD, more=SESS_MORE, osm=True),
+   dict(t='Выезд. Блок 6 сессий', price=45900, img='shop/svc-vyezd-6.webp', lead='Блок из шести сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
+   dict(t='Выезд. Блок 12 сессий', price=88800, img='shop/svc-vyezd-12.webp', lead='Блок из двенадцати сессий. Посещение по назначенному графику от специалиста в зависимости от вашей проблемы и реакции организма.', more=BLOCK_MORE, osm=True),
  ]),
  ('zal', 'Зал', [
-   dict(t='Разовое индивидуальное занятие с инструктором', price=5000, lead='Индивидуальное занятие с инструктором.', osm=True),
-   dict(t='Блок 10 индивидуальных занятий с инструктором', price=40000, osm=True),
+   dict(t='Разовое индивидуальное занятие с инструктором', price=5000, img='shop/svc-zal-1.webp', lead='Индивидуальное занятие с инструктором.', osm=True),
+   dict(t='Блок 10 индивидуальных занятий с инструктором', price=40000, img='shop/svc-zal-10.webp', osm=True),
  ]),
  ('stelki', 'Стельки', [
    dict(t='Индивидуальные стельки', price=9500, img='orto/insole.webp', lead='В стоимость входит два этапа посещения: 1.&nbsp;Изготовление стелек. 2.&nbsp;Коррекция через назначенное время.', link=('Подробнее о стельках', 'orto/')),
-   dict(t='Коррекция стелек', price=3500),
+   dict(t='Коррекция стелек', price=3500, img='shop/svc-insole-fix.webp'),
  ]),
  ('online', 'Онлайн', [
-   dict(t='Онлайн. Разовая сессия', price=5000, osm=True),
-   dict(t='Онлайн. Блок 6 сессий', price=27000, osm=True),
-   dict(t='Онлайн. Блок 12 сессий', price=48000, osm=True),
+   dict(t='Онлайн. Разовая сессия', price=5000, img='shop/svc-online-1.webp', osm=True),
+   dict(t='Онлайн. Блок 6 сессий', price=27000, img='shop/svc-online-6.webp', osm=True),
+   dict(t='Онлайн. Блок 12 сессий', price=48000, img='shop/svc-online-12.webp', osm=True),
  ]),
  ('fitness', 'Фитнес', [
-   dict(t='Фитнес онлайн. Разовое занятие', price=5000, osm=True),
-   dict(t='Фитнес онлайн. Блок 10 занятий', price=40000, osm=True),
+   dict(t='Фитнес онлайн. Разовое занятие', price=5000, img='shop/svc-fit-1.webp', osm=True),
+   dict(t='Фитнес онлайн. Блок 10 занятий', price=40000, img='shop/svc-fit-10.webp', osm=True),
  ]),
  ('massage', 'Массаж', [
-   dict(t='Массаж 30 минут', price=2500, img='shop/massage30.webp'),
-   dict(t='Массаж 60 минут', price=4500),
-   dict(t='Массаж 90 минут', price=6500),
+   dict(t='Массаж 30 минут', price=2500, img='shop/svc-massage-30.webp'),
+   dict(t='Массаж 60 минут', price=4500, img='shop/svc-massage-60.webp'),
+   dict(t='Массаж 90 минут', price=6500, img='shop/svc-massage-90.webp'),
  ]),
 ]
 
@@ -140,7 +140,7 @@ def svc_card(s, i):
     if s.get('ava'):
         img = f'<div class="svc__img svc__img--ava"><img src="{P}assets/img/{s["ava"]}" alt="{s["t"]}" width="420" height="420" loading="lazy" decoding="async"></div>'
     elif s.get('img'):
-        img = f'<div class="svc__img"><img src="{P}assets/img/{s["img"]}" alt="{s["t"]}" loading="lazy" decoding="async"></div>'
+        img = f'<div class="svc__img"><img src="{P}assets/img/{s["img"]}" alt="{s["t"]}" width="900" height="600" loading="lazy" decoding="async"></div>'
     where = f'<span class="svc__where">{s["where"]}</span>' if s.get('where') else ''
     lead = f'<p class="svc__p">{s["lead"]}</p>' if s.get('lead') else ''
     more = ''
@@ -169,14 +169,14 @@ def build_shop():
         opts += '</optgroup>'
     opts += '<option value="Подарочный сертификат">Подарочный сертификат</option>'
     select = f'<label class="field"><span>Услуга</span><select name="service">{opts}</select></label>'
-    body = phero('УСЛУГИ', 'Полный спектр услуг для восстановления подвижности вашего организма.', crumbs='Услуги', label='Услуги и цены · Москва и онлайн', art=f'<img src="{P}assets/img/shop/osmotr.webp" alt="Реабилитация: осмотр" width="600" height="600" style="max-width:420px;margin:0 auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7));rotate:4deg">',
+    body = phero('УСЛУГИ', 'Полный спектр услуг для восстановления подвижности вашего организма.', crumbs='Услуги', label='Услуги и цены · Москва и онлайн', art=f'<img src="{P}assets/img/shop/svc-hero.webp" alt="Граффити: позвоночник под лупой" width="600" height="600" style="max-width:420px;margin:0 auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.7));rotate:4deg">',
                  cta=f'<a class="btn btn--lime btn--xl magnetic" href="#zapis"><span>Записаться</span></a><a class="btn btn--ghost btn--xl magnetic" href="{TEL}"><span>Позвонить</span></a>')
     body += f'''
 <section class="sec sec--dark" style="padding-top:50px">
   <nav class="chips" aria-label="Разделы услуг">{chips}</nav>
   {groups}
   <section class="cert reveal" id="cert">
-    <div class="cert__img"><img src="{P}assets/img/shop/certificate.webp" alt="Подарочный сертификат «НеСутулься»" width="540" height="960" loading="lazy" decoding="async"></div>
+    <div class="cert__img"><img src="{P}assets/img/shop/svc-cert.webp" alt="Подарочный сертификат «НеСутулься»" width="600" height="800" loading="lazy" decoding="async"></div>
     <div>
       <h2>ПОДАРОЧНЫЙ СЕРТИФИКАТ</h2>
       <p><b>Уверены, вы знаете, кому это точно надо!</b></p>
@@ -406,7 +406,7 @@ def build_store():
     body += f'''
 <section class="sec sec--brick soon">
   <p class="soon__t reveal">СКОРО…</p>
-  <div class="merch reveal"><img src="{P}assets/img/store/merch.webp" alt="Мерч «НеСутулься» — термокружки «Собака сутулая»" width="1600" height="900" loading="lazy" decoding="async"></div>
+  <div class="merch reveal"><img src="{P}assets/img/store/merch-v2.webp" alt="Мерч «НеСутулься»: чёрные бутылка, худи и тамблер с логотипом" width="1600" height="900" loading="lazy" decoding="async"></div>
   <div class="more-link" style="gap:14px;flex-wrap:wrap"><a class="btn btn--lime btn--xl magnetic" href="{VK}" target="_blank" rel="noopener"><span>Следить в VK</span></a><a class="btn btn--ghost btn--xl magnetic" href="{P}shop/"><span>Услуги и цены</span></a></div>
 </section>'''
     page('store', 'store', 'Мерч «НеСутулься» — скоро',
