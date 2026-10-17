@@ -753,3 +753,14 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 }
 .prose tr.grp td:last-child{text-align:left}
 @media (max-width:760px){#docs .spray-title{font-size:clamp(30px,9.4vw,48px)}}
+
+/* ===== МОБИЛЬНОЕ МЕНЮ: читаемые пункты (фикс iOS: lime*multiply давал тёмный фон с тёмным текстом) ===== */
+.mnav{background:#0d0d0d url(../assets/tex/concrete.webp) center/cover;background-blend-mode:normal;color:#f2f2ec}
+.mnav::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(13,13,13,.72),rgba(13,13,13,.9));pointer-events:none;z-index:-1}
+.mnav nav a{color:#f2f2ec;-webkit-text-fill-color:#f2f2ec}
+.mnav nav a:hover,.mnav nav a:active,.mnav nav a:focus-visible{color:var(--pink);-webkit-text-fill-color:var(--pink)}
+.mnav nav a[aria-current="page"]{color:var(--lime);-webkit-text-fill-color:var(--lime)}
+.mnav__foot a{color:#f2f2ec}
+.mnav .status{color:var(--mute)}.mnav .status.is-open{color:var(--lime)}.mnav .status.is-open i{background:var(--lime)}
+@media (prefers-reduced-motion:reduce){.mnav nav a{opacity:1!important;transform:none!important;transition:none!important}}
+.hdr__nav a{color:#f2f2ec;opacity:.9}

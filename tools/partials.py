@@ -116,7 +116,7 @@ def head(P, slug, title, desc, og_title=None):
 <link rel="preload" href="{P}assets/fonts/wetpaint.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{P}assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{P}assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{P}css/style.css?v=3">
+<link rel="stylesheet" href="{P}css/style.css?v=4">
 </head>'''
 
 SCRIB = '<svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg>'
