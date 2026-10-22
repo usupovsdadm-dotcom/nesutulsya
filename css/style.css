@@ -626,6 +626,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 .prow span{font:400 34px/1 Spray,sans-serif;white-space:nowrap}
 .docs--big .polaroid{width:220px}
 .docs--big .polaroid img{aspect-ratio:auto;height:auto}
+.polaroid span small{display:block;margin-top:3px;font:500 13px/1.2 system-ui,sans-serif;color:#555}
 
 /* основатель */
 .fhero__name{font:400 clamp(30px,3.6vw,50px)/1 Caveat,cursive;color:var(--ink);margin:6px 0 0}
