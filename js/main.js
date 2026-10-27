@@ -313,7 +313,9 @@
   // ====== HERO VIDEO (lazy) ======
   var vid = $('.tv__v');
   if (vid) {
-    var startVid = function () { if (!vid.src) { vid.src = vid.dataset.src; } if (!reduce) { var p = vid.play(); if (p && p.catch) p.catch(function () {}); } };
+    vid.muted = true; vid.defaultMuted = true; vid.playsInline = true;
+    vid.addEventListener('error', function () { vid.removeAttribute('src'); vid.load(); }, { once: true }); // при ошибке остаётся постер, а не значок «не воспроизводится»
+    var startVid = function () { if (!vid.getAttribute('src')) { vid.src = vid.dataset.src; vid.load(); } if (!reduce) { var p = vid.play(); if (p && p.catch) p.catch(function () {}); } };
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (ents) { ents.forEach(function (en) { if (en.isIntersecting) startVid(); else if (vid.src) vid.pause(); }); }, { threshold: .2 }).observe(vid);
     } else startVid();
