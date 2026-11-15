@@ -14,7 +14,7 @@ def nav_items(P, home):
         ('home', 'Главная', P if P else './'),
         ('shop', 'Услуги', P + 'shop/'),
         ('founder', 'Основатель', P + 'founder/'),
-        ('team', 'Команда', h + '#team'),
+        ('team', 'Специалисты', h + '#team'),
         ('friends', 'Нам доверяют', P + 'friends/'),
         ('orto', 'Стельки', P + 'orto/'),
         ('store', 'Мерч', P + 'store/'),
@@ -56,7 +56,7 @@ def footer(P, home=False):
   <div class="ftr__top">
     <img class="ftr__logo" src="{P}assets/img/logo.webp" alt="НеСутулься" width="900" height="197" loading="lazy">
     <nav class="ftr__nav" aria-label="Карта сайта">
-      <div><b>О нас</b><a href="{P if P else './'}">Главная</a><a href="{P}founder/">Основатель</a><a href="{h}#team">Команда</a><a href="{P}friends/">Нам доверяют</a><a href="{h}#contacts">Контакты</a></div>
+      <div><b>О нас</b><a href="{P if P else './'}">Главная</a><a href="{P}founder/">Основатель</a><a href="{h}#team">Специалисты</a><a href="{P}friends/">Нам доверяют</a><a href="{h}#contacts">Контакты</a></div>
       <div><b>Услуги</b><a href="{P}shop/">Услуги и цены</a><a href="{P}orto/">Стельки</a><a href="{P}shop/#cert">Подарочный сертификат</a><a href="{P}store/">Мерч</a></div>
       <div><b>Клиентам</b><a href="{P}patients/">Отправить исследования</a><a href="{h}#faq">Вопросы</a><a href="https://music.yandex.ru/album/21096211/track/100491307" target="_blank" rel="noopener">Подкаст</a></div>
       <div><b>Медиа</b><a href="{VK}" target="_blank" rel="noopener">VK</a><a href="https://vkvideo.ru/@club231053786" target="_blank" rel="noopener">VK Видео</a><a href="https://rutube.ru/channel/27963576/" target="_blank" rel="noopener">Rutube</a><a href="https://max.ru/id772086427984_biz" target="_blank" rel="noopener">MAX</a></div>
@@ -118,7 +118,7 @@ def head(P, slug, title, desc, og_title=None):
 <link rel="preload" href="{P}assets/fonts/wetpaint.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{P}assets/fonts/unbounded.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{P}assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{P}css/style.css?v=8">
+<link rel="stylesheet" href="{P}css/style.css?v=9">
 </head>'''
 
 SCRIB = '<svg class="scrib" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 40 4, 80 22, 120 12 S 200 4, 240 14 S 285 18, 297 9" pathLength="1"/></svg>'

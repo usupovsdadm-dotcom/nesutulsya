@@ -558,7 +558,7 @@ body::after{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;
 .phero__art img{width:100%;height:auto}
 .photo-frame{position:relative;background:#f3f0e4;padding:10px;rotate:-2.5deg;box-shadow:0 0 0 3px #0d0d0d,16px 18px 0 rgba(0,0,0,.6),0 0 60px rgba(189,240,107,.25);transition:rotate .5s var(--spring)}
 .photo-frame:hover{rotate:0deg}
-.photo-frame::before,.photo-frame::after{content:"";position:absolute;z-index:2;width:96px;height:28px;background:rgba(189,240,107,.78);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.photo-frame::before,.photo-frame::after{content:none;display:none;position:absolute;z-index:2;width:96px;height:28px;background:rgba(189,240,107,.78);box-shadow:0 2px 0 rgba(0,0,0,.25)}
 .photo-frame::before{left:-22px;top:-12px;transform:rotate(-38deg)}
 .photo-frame::after{right:-22px;bottom:-10px;transform:rotate(-38deg);background:rgba(255,45,138,.7)}
 .photo-frame img{display:block;width:100%;height:auto}
