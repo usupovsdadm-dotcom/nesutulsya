@@ -11,21 +11,20 @@
 | Страница | Файл | Адрес на GitHub Pages | Заменяет на старом сайте |
 |---|---|---|---|
 | Главная | `index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/ | https://не-сутулься.рф/ |
-| Услуги и цены | `shop/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/shop/ | /shop (якоря `#cons #sess #vyezd #zal #stelki #online #fitness #massage #cert`; «Онлайн» из меню → `shop/#online`) |
+| Услуги и цены | `shop/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/shop/ | /shop (якоря `#cons #sess #vyezd #zal #stelki #fitness #massage #cert`) |
 | Основатель | `founder/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/founder/ | /Founder |
 | Нам доверяют | `friends/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/friends/ | /friends |
 | Стельки | `orto/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/orto/ | /orto |
 | Мерч | `store/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/store/ | /store |
 | Результаты исследований | `patients/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/patients/ | /patients |
-| Приложение | `application/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/application/ | /application |
 | Политика ПДн | `privacy/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/privacy/ | /privacy |
 | Политика cookie | `cookie/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/cookie/ | /cookie |
 | Пользовательское соглашение | `ps/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/ps/ | /ps |
 | Публичная оферта | `oferta/index.html` | https://usupovsdadm-dotcom.github.io/nesutulsya/oferta/ | /oferta (+ DOCX в `assets/docs/oferta.docx`) |
 
 «Команда» и «Контакты» — разделы главной (`#team`, `#contacts`), как и на старом сайте (там команда была всплывающим окном).
-Не перенесены (нужен сервер): личный кабинет, вход/регистрация и курсы (`/Chat`, `/ointments`, `/cc/*`, `/hv/*`, `/account-1`),
-онлайн-оплата «Приобрести» (корзина Creatium). Кнопка «НАЧАТЬ» на странице «Приложение» ведёт в кабинет на старом сайте.
+Не перенесены (нужен сервер): личный кабинет, вход/регистрация и курсы (`/Chat`, `/ointments`, `/cc/*`, `/hv/*`, `/account-1`), онлайн-оплата «Приобрести» (корзина Creatium).
+Разделы «Приложение» и «Онлайн» с новой версии сняты (меню, подвал, якоря и страница `/application/`).
 `/online` на старом сайте не опубликована.
 
 ### Как править страницы
