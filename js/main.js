@@ -418,18 +418,9 @@
   var ck = $('#cookie');
   if (ck) {
     var seen = null; try { seen = localStorage.getItem('ns_cookie'); } catch (e) {}
-    if (!seen) {
-      ck.hidden = false;
-      document.body.classList.add('has-cookie');
-      setTimeout(function () { ck.classList.add('is-shown'); }, 1800);
-    }
+    if (!seen) { ck.hidden = false; setTimeout(function () { ck.classList.add('is-shown'); }, 1800); }
     $$('[data-cookie]', ck).forEach(function (b) {
-      b.addEventListener('click', function () {
-        try { localStorage.setItem('ns_cookie', b.getAttribute('data-cookie')); } catch (e) {}
-        document.body.classList.remove('has-cookie');
-        ck.classList.remove('is-shown');
-        setTimeout(function () { ck.hidden = true; }, 500);
-      });
+      b.addEventListener('click', function () { try { localStorage.setItem('ns_cookie', b.getAttribute('data-cookie')); } catch (e) {} ck.classList.remove('is-shown'); setTimeout(function () { ck.hidden = true; }, 500); });
     });
   }
 })();
